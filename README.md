@@ -1,24 +1,34 @@
-# README
+# Getting Started
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Prerequisites
+- Install Docker Desktop: https://www.docker.com/get-started/
 
-Things you may want to cover:
+### Installation
+0. Create new repository from template.
 
-* Ruby version
+1. Clone project from GitHub
+```console
+git clone git@github.com:<username>/<repository>.git
+```
 
-* System dependencies
+2. Move into project folder
+```console
+cd <repository>
+```
 
-* Configuration
+3. Build Docker image
+```console
+docker-compose build
+```
 
-* Database creation
+4. Create database
+```console
+docker-compose run web bin/rails db:create
+```
 
-* Database initialization
+5. Start the app
+```console
+docker-compose up
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Open `http://localhost:3001` in a browser.
